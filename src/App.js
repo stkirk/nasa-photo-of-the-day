@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import React, { useState, useEffect} from "react";
 import "./App.css";
-import { BASE_URL, API_KEY } from './constants/index';
+import axios from 'axios';
+import { API_KEY, BASE_URL } from '../constants/index';
 import Nav from './components/Nav'
+import PhotoCard from './components/PhotoCard'
 
 
 function App() {
+  const [ data, setData] = useState();
   return (
     <div className="App">
       <Nav/>
-      
+      {/* <PhotoCard/> */}
     </div>
   );
 }

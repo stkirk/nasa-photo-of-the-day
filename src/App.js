@@ -7,10 +7,10 @@ import PhotoCard from './components/PhotoCard'
 
 
 function App() {
-  const [ data, setData] = useState("");
+  const [ data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get(`${BASE_URL}?api_key=${API_KEY}`)
+    axios.get(`${BASE_URL}?api_key=${API_KEY}&count=8`)
     .then(res => {
       console.log('RES.data', res.data)
       setData(res.data)
@@ -21,7 +21,11 @@ function App() {
   return (
     <div className="App">
       <Nav/>
-      <PhotoCard data={data} />
+      {
+        data.map(obj => {
+          return <PhotoCard key={obj.date} data={obj} />
+        })
+      }
     </div>
   );
 }

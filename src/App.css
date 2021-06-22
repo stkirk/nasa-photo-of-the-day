@@ -37,6 +37,10 @@
   }
 }
 
+.photo-card img {
+  width: 50%;
+}
+
 /* TEST */
 /* p {
   color: red;

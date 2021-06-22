@@ -7,13 +7,12 @@ import PhotoCard from './components/PhotoCard'
 
 
 function App() {
-  const [ data, setData] = useState();
+  const [ data, setData] = useState("");
 
   useEffect(() => {
-    console.log('REQUEST URL:', `${BASE_URL}?api_key=${API_KEY}`);
     axios.get(`${BASE_URL}?api_key=${API_KEY}`)
     .then(res => {
-      console.log('RES', res.data)
+      console.log('RES.data', res.data)
       setData(res.data)
     })
     .catch(err => {debugger})

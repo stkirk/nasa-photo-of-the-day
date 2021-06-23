@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Detail(props) {
     const { details, currentDetail, closeDetail } = props;
-    console.log('detail props', details)
+    // console.log('detail props', details)
     return(
         <div className="details-container">
             <h4>{details.date}</h4>

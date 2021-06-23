@@ -20,7 +20,9 @@ export default function PhotoCard(props) {
         <div className="photo-card">
             <h2>{data.title}</h2>
             <img src={data.url} alt="NASA photo of the day" />
-            <button onClick={openDetail}>View Info</button>
+            <div className="view-details-button">
+                <button onClick={openDetail}>View Info</button>
+            </div>
             {currentDetail && <Detail details={data} currentDetail={currentDetail} closeDetail={closeDetail}/>}
         </div>
     )

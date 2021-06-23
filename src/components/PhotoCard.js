@@ -5,13 +5,23 @@ import Detail from './Detail'
 
 export default function PhotoCard(props) {
     const { data } = props;
+
+    const [ currentDetail, setCurrentDetail] = useState(null)
+
+    const openDetail = () => {
+        setCurrentDetail(true)
+    }
+    const closeDetail = () => {
+        setCurrentDetail(null)
+    }
+
     // console.log(props)
     return(
         <div className="photo-card">
             <h2>{data.title}</h2>
             <img src={data.url} alt="NASA photo of the day" />
-            <button>View Info</button>
-            <Detail details={data} />
+            <button onClick={openDetail}>View Info</button>
+            {currentDetail && <Detail details={data} currentDetail={currentDetail} closeDetail={closeDetail}/>}
         </div>
     )
 }

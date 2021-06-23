@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function Detail(props) {
-    const { details, currentDetail, closeDetail } = props;
+    const { details, closeDetail } = props;
     // console.log('detail props', details)
     return(
         <div className="details-container">

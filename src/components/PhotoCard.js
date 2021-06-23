@@ -1,6 +1,4 @@
-import React, { useState, useEffect} from 'react'
-import axios from 'axios';
-import { API_KEY, BASE_URL } from '../constants/index';
+import React, { useState } from 'react'
 import Detail from './Detail'
 
 export default function PhotoCard(props) {
@@ -23,7 +21,7 @@ export default function PhotoCard(props) {
             <div className="view-details-button">
                 <button onClick={openDetail}>View Info</button>
             </div>
-            {currentDetail && <Detail details={data} currentDetail={currentDetail} closeDetail={closeDetail}/>}
+            {currentDetail && <Detail details={data} closeDetail={closeDetail}/>}
         </div>
     )
 }

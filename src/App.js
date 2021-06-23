@@ -23,7 +23,10 @@ function App() {
       <Nav/>
       {
         data.map(obj => {
-          return <PhotoCard key={obj.date} data={obj} />
+          return (
+            obj.media_type === "image" ? <PhotoCard key={obj.date} data={obj} />
+            : null
+          )
         })
       }
     </div>

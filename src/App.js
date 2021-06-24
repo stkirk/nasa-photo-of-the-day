@@ -4,6 +4,13 @@ import axios from "axios";
 import { API_KEY, BASE_URL } from "./constants/index";
 import Nav from "./components/Nav";
 import PhotoCard from "./components/PhotoCard";
+import styled from "styled-components";
+
+const StyledGallery = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 
 function App() {
   const [data, setData] = useState([]);
@@ -23,13 +30,13 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <section className="main-section">
+      <StyledGallery>
         {data.map((obj) => {
           return obj.media_type === "image" ? (
             <PhotoCard key={obj.date} data={obj} />
           ) : null;
         })}
-      </section>
+      </StyledGallery>
     </div>
   );
 }

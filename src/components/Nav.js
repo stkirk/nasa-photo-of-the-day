@@ -10,6 +10,10 @@ const StyledHeader = styled.header`
   margin: 0 2%;
   padding: 3%;
 
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+
   .image-wrapper img {
     width: 150px;
   }
@@ -18,7 +22,6 @@ const StyledHeader = styled.header`
     width: 50%;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
   }
 
   .nav a {
@@ -30,7 +33,13 @@ const StyledHeader = styled.header`
     border-radius: 5px;
     text-align: center;
     font-size: 1.8rem;
-    transition: background-color 1s ease;
+    &:hover {
+      background-color: #fc3d21;
+      font-weight: bold;
+      transform: scale(1.1);
+      transition: all 0.35s ease-in-out;
+    }
+    transition: all 0.35s ease-in-out;
   }
 `;
 

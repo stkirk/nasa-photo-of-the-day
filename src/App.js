@@ -9,7 +9,7 @@ import styled from "styled-components";
 const StyledGallery = styled.section`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 `;
 
 function App() {
